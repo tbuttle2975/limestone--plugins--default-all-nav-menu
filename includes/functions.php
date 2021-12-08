@@ -88,9 +88,9 @@ function make_short_navigation()
 
 $run_once = get_option('menu_check');
 
-if (!$run_once) {
-    add_action('after_setup_theme', 'make_default_all_navigation_menu');
-    add_action('after_setup_theme', 'make_short_navigation');
+//if (!$run_once) {
+add_action('init', 'make_default_all_navigation_menu');
+add_action('init', 'make_short_navigation');
 
-    update_option('menu_check', true);
-}
+update_option('menu_check', true);
+//}
